@@ -18,36 +18,36 @@
 #define GPIO_Pin_15      ((uint16_t)0x8000)
 #define GPIO_Pin_ALL     ((uint16_t)0xffff)
 
-//³õÊ¼»¯GPIO
+//Initialize GPIO
 /*
 typedef struct
 {
-	uint32_t    GPIO_Pin;    //GPIO Òý½Å
-	uint8_t     GPIO_Mode;   //GPIO Òý½Å¹¤×÷Ä£Ê½
-	uint8_t     GPIO_Speed;  //GPIO Òý½ÅËÙÂÊ
-	uint8_t     GPIO_OType;  //GPIO Òý½ÅÊä³öÀàÐÍ
-	uint8_t     GPIO_PuPd;   //GPIO Òý½ÅÉÏ/ÏÂÀ­
+	uint32_t    GPIO_Pin;    
+	uint8_t     GPIO_Mode;   
+	uint8_t     GPIO_Speed;  
+	uint8_t     GPIO_OType;  
+	uint8_t     GPIO_PuPd;   
 }GPIO_InitTypeDef;
 */
 
 //-----------------------------------------------------------
-//GPIO ¶Ë¿ÚÅäÖÃÄ£Ê½µÄÃ¶¾Ù¶¨Òå
+//GPIO 
 typedef enum
 {
-	GPIO_Mode_IN  = 0X00,   //ÊäÈë
-	GPIO_Mode_OUT = 0X01,   //Êä³ö
-	GPIO_Mode_AF  = 0X02,   //¸´ÓÃ
-	GPIO_Mode_AN  = 0X03    //Ä£Äâ
+	GPIO_Mode_IN  = 0X00,   
+	GPIO_Mode_OUT = 0X01,   
+	GPIO_Mode_AF  = 0X02,   
+	GPIO_Mode_AN  = 0X03    
 }GPIOMode_TypeDef;
 
-//GPIO ¶Ë¿ÚÊä³öÀàÐÍÃ¶¾Ù¶¨Òå
+
 typedef enum
 {
-	GPIO_OType_PP   = 0x00,  //ÍÆÍì
-	GPIO_OType_OD   = 0x01   //¿ªÂ©
+	GPIO_OType_PP   = 0x00,  
+	GPIO_OType_OD   = 0x01   
 }GPIOOType_TypeDef;
 
-//GPIO ¶Ë¿ÚËÙ¶ÈµÄÃ¶¾Ù¶¨Òå
+
 typedef enum
 {
 	GPIO_Speed_2MHz    = 0x00,  //2MHz
@@ -56,22 +56,22 @@ typedef enum
 	GPIO_Speed_100MHz  = 0x11   //100MHz
 }GPIOSpeed_TypeDef;
 
-//GPIO ¶Ë¿ÚÉÏ/ÏÂÀ­Ã¶¾Ù¶¨Òå
+
 typedef enum
 {
-	GPIO_PuPd_NOPULL = 0X00,//¸¡¿Õ
-	GPIO_PuPd_UP     = 0X01,//ÉÏÀ­
-	GPIO_PuPd_DOWN   = 0X02 //ÏÂÀ­
+	GPIO_PuPd_NOPULL = 0X00,
+	GPIO_PuPd_UP     = 0X01,
+	GPIO_PuPd_DOWN   = 0X02 
 }GPIOPuPd_TypeDef;
 //-----------------------------------------------------------
 
 typedef struct
 {
-	uint32_t           GPIO_Pin;     //GPIO Òý½Å
-	GPIOMode_TypeDef   GPIO_Mode;    //GPIO Òý½Å¹¤×÷Ä£Ê½
-	GPIOOType_TypeDef  GPIO_OType;   //GPIO Òý½ÅÊä³öÀàÐÍ
-	GPIOSpeed_TypeDef  GPIO_Speed;   //GPIO Òý½ÅËÙÂÊ
-	GPIOPuPd_TypeDef   GPIO_PuPd;    //GPIO Òý½ÅÉÏ/ÏÂÀ­
+	uint32_t           GPIO_Pin;     
+	GPIOMode_TypeDef   GPIO_Mode;    
+	GPIOOType_TypeDef  GPIO_OType;   
+	GPIOSpeed_TypeDef  GPIO_Speed;   
+	GPIOPuPd_TypeDef   GPIO_PuPd;   
 }GPIO_InitTypeDef;
 
 
